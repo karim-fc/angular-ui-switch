@@ -14,12 +14,10 @@ angular.module('uiSwitch', [])
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
-      for(let attr of attrs) {
-        console.log(attr);
-      }
       html +=     attrs.id ? ' id="' + attrs.id + '"' : '';
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
+      html +=     attrs.ngRequired ? ' ng-required="' + attrs.ngRequired + '"' : '';
       html +=     ' style="display:none" />';
       html +=     '<span class="switch-text">'; /*adding new container for switch text*/
       html +=     attrs.on ? '<span class="on">'+attrs.on+'</span>' : ''; /*switch text on value set by user in directive html markup*/
