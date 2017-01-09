@@ -14,6 +14,9 @@ angular.module('uiSwitch', [])
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
+      for(let attr of attrs) {
+        console.log(attr);
+      }
       html +=     attrs.id ? ' id="' + attrs.id + '"' : '';
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
